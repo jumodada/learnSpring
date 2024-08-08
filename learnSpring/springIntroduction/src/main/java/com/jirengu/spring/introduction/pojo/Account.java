@@ -17,10 +17,23 @@ public class Account implements IAccount {
         this.money = money;
     }
 
+
+    @Value("fuy")
+    private String realName;
+
+
+    public String getRealName() {
+        return realName;
+    }
+
+    public void setRealName(String realName) {
+        this.realName = realName;
+    }
+
     @Override
     public String toString() {
         return "Account{" +
-                "money=" + money +
+                "money=" + money  + " realName: " + realName +
                 '}';
     }
 }

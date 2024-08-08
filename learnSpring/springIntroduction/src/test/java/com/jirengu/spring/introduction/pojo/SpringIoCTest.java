@@ -15,6 +15,11 @@ public class SpringIoCTest {
         // 从 Spring IoC 容器对象中获取 bean
         Object object = applicationContext.getBean("user");
         System.out.println(object);
+
+
+        ApplicationContext applicationContext1 = new ClassPathXmlApplicationContext("bean.xml");
+        Object object1 = applicationContext1.getBean("user");
+        System.out.println(object1);
     }
 
     @Test

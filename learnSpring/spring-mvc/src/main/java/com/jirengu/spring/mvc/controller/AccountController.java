@@ -7,7 +7,6 @@ import com.jirengu.spring.mvc.excpetion.ParamException;
 import com.jirengu.spring.mvc.pojo.AccountPO;
 import com.jirengu.spring.mvc.request.TransferMoneyRequest;
 import com.jirengu.spring.mvc.service.IAccountService;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;

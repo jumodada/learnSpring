@@ -244,113 +244,113 @@ public class AccountPOExample {
             return (Criteria) this;
         }
 
-        public Criteria andMoneyEqualTo(Integer value) {
+        public Criteria andMoneyEqualTo(Long value) {
             addCriterion("money =", value, "money");
             return (Criteria) this;
         }
 
-        public Criteria andMoneyNotEqualTo(Integer value) {
+        public Criteria andMoneyNotEqualTo(Long value) {
             addCriterion("money <>", value, "money");
             return (Criteria) this;
         }
 
-        public Criteria andMoneyGreaterThan(Integer value) {
+        public Criteria andMoneyGreaterThan(Long value) {
             addCriterion("money >", value, "money");
             return (Criteria) this;
         }
 
-        public Criteria andMoneyGreaterThanOrEqualTo(Integer value) {
+        public Criteria andMoneyGreaterThanOrEqualTo(Long value) {
             addCriterion("money >=", value, "money");
             return (Criteria) this;
         }
 
-        public Criteria andMoneyLessThan(Integer value) {
+        public Criteria andMoneyLessThan(Long value) {
             addCriterion("money <", value, "money");
             return (Criteria) this;
         }
 
-        public Criteria andMoneyLessThanOrEqualTo(Integer value) {
+        public Criteria andMoneyLessThanOrEqualTo(Long value) {
             addCriterion("money <=", value, "money");
             return (Criteria) this;
         }
 
-        public Criteria andMoneyIn(List<Integer> values) {
+        public Criteria andMoneyIn(List<Long> values) {
             addCriterion("money in", values, "money");
             return (Criteria) this;
         }
 
-        public Criteria andMoneyNotIn(List<Integer> values) {
+        public Criteria andMoneyNotIn(List<Long> values) {
             addCriterion("money not in", values, "money");
             return (Criteria) this;
         }
 
-        public Criteria andMoneyBetween(Integer value1, Integer value2) {
+        public Criteria andMoneyBetween(Long value1, Long value2) {
             addCriterion("money between", value1, value2, "money");
             return (Criteria) this;
         }
 
-        public Criteria andMoneyNotBetween(Integer value1, Integer value2) {
+        public Criteria andMoneyNotBetween(Long value1, Long value2) {
             addCriterion("money not between", value1, value2, "money");
             return (Criteria) this;
         }
 
-        public Criteria andUserAgeIsNull() {
-            addCriterion("user_age is null");
+        public Criteria andUserageIsNull() {
+            addCriterion("userAge is null");
             return (Criteria) this;
         }
 
-        public Criteria andUserAgeIsNotNull() {
-            addCriterion("user_age is not null");
+        public Criteria andUserageIsNotNull() {
+            addCriterion("userAge is not null");
             return (Criteria) this;
         }
 
-        public Criteria andUserAgeEqualTo(Integer value) {
-            addCriterion("user_age =", value, "userAge");
+        public Criteria andUserageEqualTo(Integer value) {
+            addCriterion("userAge =", value, "userage");
             return (Criteria) this;
         }
 
-        public Criteria andUserAgeNotEqualTo(Integer value) {
-            addCriterion("user_age <>", value, "userAge");
+        public Criteria andUserageNotEqualTo(Integer value) {
+            addCriterion("userAge <>", value, "userage");
             return (Criteria) this;
         }
 
-        public Criteria andUserAgeGreaterThan(Integer value) {
-            addCriterion("user_age >", value, "userAge");
+        public Criteria andUserageGreaterThan(Integer value) {
+            addCriterion("userAge >", value, "userage");
             return (Criteria) this;
         }
 
-        public Criteria andUserAgeGreaterThanOrEqualTo(Integer value) {
-            addCriterion("user_age >=", value, "userAge");
+        public Criteria andUserageGreaterThanOrEqualTo(Integer value) {
+            addCriterion("userAge >=", value, "userage");
             return (Criteria) this;
         }
 
-        public Criteria andUserAgeLessThan(Integer value) {
-            addCriterion("user_age <", value, "userAge");
+        public Criteria andUserageLessThan(Integer value) {
+            addCriterion("userAge <", value, "userage");
             return (Criteria) this;
         }
 
-        public Criteria andUserAgeLessThanOrEqualTo(Integer value) {
-            addCriterion("user_age <=", value, "userAge");
+        public Criteria andUserageLessThanOrEqualTo(Integer value) {
+            addCriterion("userAge <=", value, "userage");
             return (Criteria) this;
         }
 
-        public Criteria andUserAgeIn(List<Integer> values) {
-            addCriterion("user_age in", values, "userAge");
+        public Criteria andUserageIn(List<Integer> values) {
+            addCriterion("userAge in", values, "userage");
             return (Criteria) this;
         }
 
-        public Criteria andUserAgeNotIn(List<Integer> values) {
-            addCriterion("user_age not in", values, "userAge");
+        public Criteria andUserageNotIn(List<Integer> values) {
+            addCriterion("userAge not in", values, "userage");
             return (Criteria) this;
         }
 
-        public Criteria andUserAgeBetween(Integer value1, Integer value2) {
-            addCriterion("user_age between", value1, value2, "userAge");
+        public Criteria andUserageBetween(Integer value1, Integer value2) {
+            addCriterion("userAge between", value1, value2, "userage");
             return (Criteria) this;
         }
 
-        public Criteria andUserAgeNotBetween(Integer value1, Integer value2) {
-            addCriterion("user_age not between", value1, value2, "userAge");
+        public Criteria andUserageNotBetween(Integer value1, Integer value2) {
+            addCriterion("userAge not between", value1, value2, "userage");
             return (Criteria) this;
         }
 
@@ -471,6 +471,126 @@ public class AccountPOExample {
 
         public Criteria andStatusNotBetween(Integer value1, Integer value2) {
             addCriterion("status not between", value1, value2, "status");
+            return (Criteria) this;
+        }
+
+        public Criteria andColumnNameIsNull() {
+            addCriterion("column_name is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andColumnNameIsNotNull() {
+            addCriterion("column_name is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andColumnNameEqualTo(Integer value) {
+            addCriterion("column_name =", value, "columnName");
+            return (Criteria) this;
+        }
+
+        public Criteria andColumnNameNotEqualTo(Integer value) {
+            addCriterion("column_name <>", value, "columnName");
+            return (Criteria) this;
+        }
+
+        public Criteria andColumnNameGreaterThan(Integer value) {
+            addCriterion("column_name >", value, "columnName");
+            return (Criteria) this;
+        }
+
+        public Criteria andColumnNameGreaterThanOrEqualTo(Integer value) {
+            addCriterion("column_name >=", value, "columnName");
+            return (Criteria) this;
+        }
+
+        public Criteria andColumnNameLessThan(Integer value) {
+            addCriterion("column_name <", value, "columnName");
+            return (Criteria) this;
+        }
+
+        public Criteria andColumnNameLessThanOrEqualTo(Integer value) {
+            addCriterion("column_name <=", value, "columnName");
+            return (Criteria) this;
+        }
+
+        public Criteria andColumnNameIn(List<Integer> values) {
+            addCriterion("column_name in", values, "columnName");
+            return (Criteria) this;
+        }
+
+        public Criteria andColumnNameNotIn(List<Integer> values) {
+            addCriterion("column_name not in", values, "columnName");
+            return (Criteria) this;
+        }
+
+        public Criteria andColumnNameBetween(Integer value1, Integer value2) {
+            addCriterion("column_name between", value1, value2, "columnName");
+            return (Criteria) this;
+        }
+
+        public Criteria andColumnNameNotBetween(Integer value1, Integer value2) {
+            addCriterion("column_name not between", value1, value2, "columnName");
+            return (Criteria) this;
+        }
+
+        public Criteria andIsvipIsNull() {
+            addCriterion("isVip is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andIsvipIsNotNull() {
+            addCriterion("isVip is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andIsvipEqualTo(Boolean value) {
+            addCriterion("isVip =", value, "isvip");
+            return (Criteria) this;
+        }
+
+        public Criteria andIsvipNotEqualTo(Boolean value) {
+            addCriterion("isVip <>", value, "isvip");
+            return (Criteria) this;
+        }
+
+        public Criteria andIsvipGreaterThan(Boolean value) {
+            addCriterion("isVip >", value, "isvip");
+            return (Criteria) this;
+        }
+
+        public Criteria andIsvipGreaterThanOrEqualTo(Boolean value) {
+            addCriterion("isVip >=", value, "isvip");
+            return (Criteria) this;
+        }
+
+        public Criteria andIsvipLessThan(Boolean value) {
+            addCriterion("isVip <", value, "isvip");
+            return (Criteria) this;
+        }
+
+        public Criteria andIsvipLessThanOrEqualTo(Boolean value) {
+            addCriterion("isVip <=", value, "isvip");
+            return (Criteria) this;
+        }
+
+        public Criteria andIsvipIn(List<Boolean> values) {
+            addCriterion("isVip in", values, "isvip");
+            return (Criteria) this;
+        }
+
+        public Criteria andIsvipNotIn(List<Boolean> values) {
+            addCriterion("isVip not in", values, "isvip");
+            return (Criteria) this;
+        }
+
+        public Criteria andIsvipBetween(Boolean value1, Boolean value2) {
+            addCriterion("isVip between", value1, value2, "isvip");
+            return (Criteria) this;
+        }
+
+        public Criteria andIsvipNotBetween(Boolean value1, Boolean value2) {
+            addCriterion("isVip not between", value1, value2, "isvip");
             return (Criteria) this;
         }
     }

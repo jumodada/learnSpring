@@ -19,7 +19,7 @@ public class IoCTest {
     @Test
     public void testFactoryBean() {
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(SpringConfiguration.class);
-        Object apple1 = applicationContext.getBean("&apple");
+        Object apple1 = applicationContext.getBean("apple");
         System.out.println("第 1 个 bean：" + apple1);
         Object apple2 = applicationContext.getBean("apple");
         System.out.println("第 2 个 bean：" + apple2);

@@ -20,7 +20,7 @@ public class AccountServiceImpl implements IAccountService {
         if (accountPO == null) {
             return null;
         } else {
-            return accountPO.getMoney();
+            return Math.toIntExact(accountPO.getMoney());
         }
     }
 

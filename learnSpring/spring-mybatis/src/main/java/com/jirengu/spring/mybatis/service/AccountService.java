@@ -19,7 +19,7 @@ public class AccountService implements IAccountService {
         if (accountPO == null) {
             return null;
         } else {
-            return accountPO.getMoney();
+            return Math.toIntExact(accountPO.getMoney());
         }
     }
     @Override
@@ -44,13 +44,13 @@ public class AccountService implements IAccountService {
         // 扣减转出账户余额
         AccountPO fromAccount = new AccountPO();
         fromAccount.setId(fromAccountId);
-        fromAccount.setMoney(fromAccountBalance - money);
+        fromAccount.setMoney((long) (fromAccountBalance - money));
         int fromCount = accountPOMapper.updateByPrimaryKeySelective(fromAccount);
         int a = 1/0;
         // 增加转入账户余额
         AccountPO toAccount = new AccountPO();
         toAccount.setId(toAccountId);
-        toAccount.setMoney(toAccountBalance + money);
+        toAccount.setMoney((long) (toAccountBalance + money));
         int toCount = accountPOMapper.updateByPrimaryKeySelective(toAccount);
         if (fromCount + toCount == 2) {
             return true;
@@ -70,7 +70,7 @@ public class AccountService implements IAccountService {
         Integer balance = balanceInquiry(accountId);
         AccountPO fromAccount = new AccountPO();
         fromAccount.setId(accountId);
-        fromAccount.setMoney(balance + money);
+        fromAccount.setMoney((long) (balance + money));
         accountPOMapper.updateByPrimaryKeySelective(fromAccount);
         throw new IOException();
     }

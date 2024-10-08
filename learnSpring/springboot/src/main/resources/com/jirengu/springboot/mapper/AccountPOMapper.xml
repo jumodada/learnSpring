@@ -4,10 +4,12 @@
   <resultMap id="BaseResultMap" type="com.jirengu.springboot.pojo.AccountPO">
     <id column="id" jdbcType="INTEGER" property="id" />
     <result column="name" jdbcType="VARCHAR" property="name" />
-    <result column="money" jdbcType="INTEGER" property="money" />
-    <result column="user_age" jdbcType="INTEGER" property="userAge" />
+    <result column="money" jdbcType="BIGINT" property="money" />
+    <result column="userAge" jdbcType="INTEGER" property="userage" />
     <result column="gender" jdbcType="INTEGER" property="gender" />
     <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="column_name" jdbcType="INTEGER" property="columnName" />
+    <result column="isVip" jdbcType="BIT" property="isvip" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -68,7 +70,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    id, name, money, user_age, gender, status
+    id, name, money, userAge, gender, status, column_name, isVip
   </sql>
   <select id="selectByExample" parameterType="com.jirengu.springboot.pojo.AccountPOExample" resultMap="BaseResultMap">
     select
@@ -101,10 +103,12 @@
     </if>
   </delete>
   <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.jirengu.springboot.pojo.AccountPO" useGeneratedKeys="true">
-    insert into account (name, money, user_age, 
-      gender, status)
-    values (#{name,jdbcType=VARCHAR}, #{money,jdbcType=INTEGER}, #{userAge,jdbcType=INTEGER}, 
-      #{gender,jdbcType=INTEGER}, #{status,jdbcType=INTEGER})
+    insert into account (name, money, userAge, 
+      gender, status, column_name, 
+      isVip)
+    values (#{name,jdbcType=VARCHAR}, #{money,jdbcType=BIGINT}, #{userage,jdbcType=INTEGER}, 
+      #{gender,jdbcType=INTEGER}, #{status,jdbcType=INTEGER}, #{columnName,jdbcType=INTEGER}, 
+      #{isvip,jdbcType=BIT})
   </insert>
   <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.jirengu.springboot.pojo.AccountPO" useGeneratedKeys="true">
     insert into account
@@ -115,8 +119,8 @@
       <if test="money != null">
         money,
       </if>
-      <if test="userAge != null">
-        user_age,
+      <if test="userage != null">
+        userAge,
       </if>
       <if test="gender != null">
         gender,
@@ -124,22 +128,34 @@
       <if test="status != null">
         status,
       </if>
+      <if test="columnName != null">
+        column_name,
+      </if>
+      <if test="isvip != null">
+        isVip,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="name != null">
         #{name,jdbcType=VARCHAR},
       </if>
       <if test="money != null">
-        #{money,jdbcType=INTEGER},
+        #{money,jdbcType=BIGINT},
       </if>
-      <if test="userAge != null">
-        #{userAge,jdbcType=INTEGER},
+      <if test="userage != null">
+        #{userage,jdbcType=INTEGER},
       </if>
       <if test="gender != null">
         #{gender,jdbcType=INTEGER},
       </if>
       <if test="status != null">
         #{status,jdbcType=INTEGER},
+      </if>
+      <if test="columnName != null">
+        #{columnName,jdbcType=INTEGER},
+      </if>
+      <if test="isvip != null">
+        #{isvip,jdbcType=BIT},
       </if>
     </trim>
   </insert>
@@ -159,16 +175,22 @@
         name = #{row.name,jdbcType=VARCHAR},
       </if>
       <if test="row.money != null">
-        money = #{row.money,jdbcType=INTEGER},
+        money = #{row.money,jdbcType=BIGINT},
       </if>
-      <if test="row.userAge != null">
-        user_age = #{row.userAge,jdbcType=INTEGER},
+      <if test="row.userage != null">
+        userAge = #{row.userage,jdbcType=INTEGER},
       </if>
       <if test="row.gender != null">
         gender = #{row.gender,jdbcType=INTEGER},
       </if>
       <if test="row.status != null">
         status = #{row.status,jdbcType=INTEGER},
+      </if>
+      <if test="row.columnName != null">
+        column_name = #{row.columnName,jdbcType=INTEGER},
+      </if>
+      <if test="row.isvip != null">
+        isVip = #{row.isvip,jdbcType=BIT},
       </if>
     </set>
     <if test="example != null">
@@ -179,10 +201,12 @@
     update account
     set id = #{row.id,jdbcType=INTEGER},
       name = #{row.name,jdbcType=VARCHAR},
-      money = #{row.money,jdbcType=INTEGER},
-      user_age = #{row.userAge,jdbcType=INTEGER},
+      money = #{row.money,jdbcType=BIGINT},
+      userAge = #{row.userage,jdbcType=INTEGER},
       gender = #{row.gender,jdbcType=INTEGER},
-      status = #{row.status,jdbcType=INTEGER}
+      status = #{row.status,jdbcType=INTEGER},
+      column_name = #{row.columnName,jdbcType=INTEGER},
+      isVip = #{row.isvip,jdbcType=BIT}
     <if test="example != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -194,10 +218,10 @@
         name = #{name,jdbcType=VARCHAR},
       </if>
       <if test="money != null">
-        money = #{money,jdbcType=INTEGER},
+        money = #{money,jdbcType=BIGINT},
       </if>
-      <if test="userAge != null">
-        user_age = #{userAge,jdbcType=INTEGER},
+      <if test="userage != null">
+        userAge = #{userage,jdbcType=INTEGER},
       </if>
       <if test="gender != null">
         gender = #{gender,jdbcType=INTEGER},
@@ -205,16 +229,24 @@
       <if test="status != null">
         status = #{status,jdbcType=INTEGER},
       </if>
+      <if test="columnName != null">
+        column_name = #{columnName,jdbcType=INTEGER},
+      </if>
+      <if test="isvip != null">
+        isVip = #{isvip,jdbcType=BIT},
+      </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.jirengu.springboot.pojo.AccountPO">
     update account
     set name = #{name,jdbcType=VARCHAR},
-      money = #{money,jdbcType=INTEGER},
-      user_age = #{userAge,jdbcType=INTEGER},
+      money = #{money,jdbcType=BIGINT},
+      userAge = #{userage,jdbcType=INTEGER},
       gender = #{gender,jdbcType=INTEGER},
-      status = #{status,jdbcType=INTEGER}
+      status = #{status,jdbcType=INTEGER},
+      column_name = #{columnName,jdbcType=INTEGER},
+      isVip = #{isvip,jdbcType=BIT}
     where id = #{id,jdbcType=INTEGER}
   </update>
   <select id="selectByExampleWithRowbounds" parameterType="com.jirengu.springboot.pojo.AccountPOExample" resultMap="BaseResultMap">

@@ -5,13 +5,17 @@ public class AccountPO {
 
     private String name;
 
-    private Integer money;
+    private Long money;
 
-    private Integer userAge;
+    private Integer userage;
 
     private Integer gender;
 
     private Integer status;
+
+    private Integer columnName;
+
+    private Boolean isvip;
 
     public Integer getId() {
         return id;
@@ -29,20 +33,20 @@ public class AccountPO {
         this.name = name;
     }
 
-    public Integer getMoney() {
+    public Long getMoney() {
         return money;
     }
 
-    public void setMoney(Integer money) {
+    public void setMoney(Long money) {
         this.money = money;
     }
 
-    public Integer getUserAge() {
-        return userAge;
+    public Integer getUserage() {
+        return userage;
     }
 
-    public void setUserAge(Integer userAge) {
-        this.userAge = userAge;
+    public void setUserage(Integer userage) {
+        this.userage = userage;
     }
 
     public Integer getGender() {
@@ -61,15 +65,19 @@ public class AccountPO {
         this.status = status;
     }
 
-    @Override
-    public String toString() {
-        return "AccountPO{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", money=" + money +
-                ", userAge=" + userAge +
-                ", gender=" + gender +
-                ", status=" + status +
-                '}';
+    public Integer getColumnName() {
+        return columnName;
+    }
+
+    public void setColumnName(Integer columnName) {
+        this.columnName = columnName;
+    }
+
+    public Boolean getIsvip() {
+        return isvip;
+    }
+
+    public void setIsvip(Boolean isvip) {
+        this.isvip = isvip;
     }
 }

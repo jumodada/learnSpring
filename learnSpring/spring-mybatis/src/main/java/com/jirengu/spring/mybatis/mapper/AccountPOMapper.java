@@ -1,8 +1,9 @@
 package com.jirengu.spring.mybatis.mapper;
 
+import java.util.List;
+
 import com.jirengu.spring.mybatis.pojo.AccountPO;
 import com.jirengu.spring.mybatis.pojo.AccountPOExample;
-import java.util.List;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.session.RowBounds;
 

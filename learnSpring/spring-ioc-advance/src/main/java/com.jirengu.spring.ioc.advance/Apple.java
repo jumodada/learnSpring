@@ -3,10 +3,10 @@ package com.jirengu.spring.ioc.advance;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-//@Component
+@Component(value = "apple")
 public class Apple {
 
-    @Value("苹果")
+    @Value("apple")
     private String name;
 
     public Apple(@Value("苹果") String name) {

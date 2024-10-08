@@ -1,7 +1,7 @@
 spring:
   datasource:
     username: root
-    password: rootroot
+    password: 12345678
     url: jdbc:mysql://127.0.0.1:3306/school
     driver-class-name: com.mysql.cj.jdbc.Driver
     # 数据源使用druid
